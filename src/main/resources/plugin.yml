@@ -1,0 +1,7 @@
+name: LuciidPlugin
+version: '${project.version}'
+main: me.luciid.survivalserver.Main
+api-version: 1.19
+commands:
+  gm:
+  inv:
