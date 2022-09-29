@@ -2,6 +2,7 @@ package me.luciid.survivalserver;
 
 
 import me.luciid.survivalserver.backpack.BackpackCommand;
+import me.luciid.survivalserver.backpack.BackpackListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,6 +26,7 @@ public final class Main extends JavaPlugin {
         PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(new ConnectionListener(), this);
         pluginManager.registerEvents(new ChatListener(), this);
+        pluginManager.registerEvents(new BackpackListener(), this);
 
         System.out.println("LuciidPlugin Schallert jetzt durch alter");
 
