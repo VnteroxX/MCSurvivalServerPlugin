@@ -12,10 +12,6 @@ public class ChatListener implements Listener {
         Player player = event.getPlayer();
 
         event.setFormat("§6" + "%1$s: " + "§7" + "%2$s");
-
-        event.getMessage();
-        event.getFormat();
-        event.getRecipients();
     }
 
 }

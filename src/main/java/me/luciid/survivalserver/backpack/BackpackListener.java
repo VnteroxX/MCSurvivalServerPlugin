@@ -14,8 +14,9 @@ public class BackpackListener implements Listener {
 
         Player player = event.getPlayer();
 
-        player.sendMessage("§8[Debug] Einzelnes Buch erkannt.");
-        //Hier dann das Inventar Öffnen
+        //player.sendMessage("§8[Debug] Einzelnes Buch erkannt.");
+
+        //Hier dann das Inventar Öffnen wenn mit dem richtigen Item interagiert wird
 
     }
 }
