@@ -20,7 +20,7 @@ public class BackpackCommand implements CommandExecutor {
             player.sendMessage("§8[Debug] /inv Befehl erfolgreich geladen");
 
             if(holdByPlayer == Material.BOOK) {
-
+                //Hier wird das Backpack Buch erstellt & gespeichert
             }
 
         }
