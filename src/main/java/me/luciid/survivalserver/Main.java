@@ -27,6 +27,7 @@ public final class Main extends JavaPlugin {
         pluginManager.registerEvents(new ConnectionListener(), this);
         pluginManager.registerEvents(new ChatListener(), this);
         pluginManager.registerEvents(new BackpackListener(), this);
+        pluginManager.registerEvents(new GrenadeListener(), this);
 
         System.out.println("LuciidPlugin Schallert jetzt durch alter");
 

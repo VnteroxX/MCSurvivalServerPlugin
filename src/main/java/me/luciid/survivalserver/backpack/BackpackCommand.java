@@ -1,14 +1,10 @@
 package me.luciid.survivalserver.backpack;
 
-import me.luciid.survivalserver.utils.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.EquipmentSlot;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -30,18 +26,19 @@ public class BackpackCommand implements CommandExecutor {
                 if(player.getInventory().getItemInMainHand().getAmount() == 1) {
 
 
-                    ItemStack backpackItem = player.getInventory().getItemInMainHand();
+                    ItemStack backpackItem = new ItemStack(Material.BOOK);
                     String backpackName = args[0];
                     ItemMeta backpackMeta = backpackItem.getItemMeta();
 
                     ArrayList<String> backpackLore = new ArrayList<String>();
 
                     backpackLore.add("§eRucksack von §6" + player.getDisplayName());
-                    backpackLore.set(1, "Debug");
-                    backpackMeta.setDisplayName(backpackName);
+                    backpackMeta.setDisplayName("§a" + args[0]);
                     backpackMeta.setLore(backpackLore);
 
-                    //player.getInventory().setItem(player.getInventory().getHeldItemSlot(), backpackItem);
+                    backpackItem.setItemMeta(backpackMeta);
+
+                    player.getInventory().setItem(player.getInventory().getHeldItemSlot(), backpackItem);
 
                     player.sendMessage("§aDer Rucksack §6" + backpackName + " §awurde erfolgreich erstellt!");
 

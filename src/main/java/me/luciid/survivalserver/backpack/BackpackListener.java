@@ -1,6 +1,7 @@
 package me.luciid.survivalserver.backpack;
 
 import org.bukkit.Material;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,10 +14,9 @@ public class BackpackListener implements Listener {
         if(event.getItem() == null) return;
 
         Player player = event.getPlayer();
-
-        //player.sendMessage("§8[Debug] Einzelnes Buch erkannt.");
-
-        //Hier dann das Inventar Öffnen wenn mit dem richtigen Item interagiert wird
-
+        if(event.getItem().getType() == Material.BOOK) {
+            //Hier muss zunächst überprüft werden ob das Buch zu einem Inventar gehört
+            //Dann muss ggf. das Inventar aufgerufen werden
+        }
     }
 }
