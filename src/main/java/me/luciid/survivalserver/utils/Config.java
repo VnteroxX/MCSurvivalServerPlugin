@@ -7,6 +7,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Config {
+
+    //pimmelkopf
     private static File file;
     private static YamlConfiguration config;
 
